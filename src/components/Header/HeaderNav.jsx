@@ -1,16 +1,17 @@
 import { Link } from "react-router-dom";
+import { MENU_BAR, PAGE_URL } from "../../utils/constants";
 
 function HeaderNav() {
-  const MENU_BAR = ["Home", "About", "Practice"];
-  const PAGE_URL = ["/", "/about", "practice"];
+  const menuBar = MENU_BAR;
+  const pageURL = PAGE_URL;
 
   return (
     <nav className="header-navbar">
       <ul className="nav-menu">
-        {MENU_BAR.map((nav, idx) => {
+        {menuBar.map((nav, idx) => {
           return (
             <li className="nav-item">
-              <Link to={PAGE_URL[idx]}>{nav}</Link>
+              <Link to={pageURL[idx]}>{nav}</Link>
             </li>
           );
         })}
