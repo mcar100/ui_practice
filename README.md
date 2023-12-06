@@ -1,6 +1,6 @@
-# ui_practice
+# react_practice
 
-frontend UI를 연습하는 공간
+React와 여러 기술을 연습하는 공간
 
 ### tools
 
