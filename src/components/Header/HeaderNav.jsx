@@ -10,7 +10,7 @@ function HeaderNav() {
       <ul className="nav-menu">
         {menuBar.map((nav, idx) => {
           return (
-            <li className="nav-item">
+            <li className="nav-item" key={`headerNav-${idx}`}>
               <Link to={pageURL[idx]}>{nav}</Link>
             </li>
           );

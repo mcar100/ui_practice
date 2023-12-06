@@ -110,3 +110,19 @@
   justify-self: $js;
   align-self: $as;
 }
+
+/* buttons */
+@mixin circle-button() {
+  border: none;
+  border-radius: 100%;
+
+  &:hover {
+    opacity: 90%;
+  }
+}
+
+@mixin background-image($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+}
