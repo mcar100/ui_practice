@@ -10,6 +10,7 @@
 
 @mixin margin($a: 0px, $t: 0px, $b: 0px, $l: 0px, $r: 0px) {
   @if ($a>0) {
+    margin: $a;
   } @else {
     margin-top: $t;
     margin-bottom: $b;
@@ -38,6 +39,16 @@
 @mixin box-color($bgc: #303030, $rc: #fff) {
   background-color: $bgc;
   border-color: $rc;
+}
+
+@mixin box-minSize($mw: 100px, $mh: 100px) {
+  min-width: $mw;
+  min-height: $mh;
+}
+
+@mixin box-maxSize($mw: 500px, $mh: 500px) {
+  max-width: $mw;
+  max-height: $mh;
 }
 
 @mixin font-style($fs: 10px, $fw: bold, $fc: c.$black) {

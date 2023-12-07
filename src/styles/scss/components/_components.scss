@@ -19,7 +19,7 @@
       @include mix.border($r: 3px);
       @include mix.box-color(c.$bar, c.$bar);
       @include mix.font-style(15px, bold, c.$white);
-      @include mix.margin(5px);
+      @include mix.margin($b: 12px);
       @include mix.padding(10px);
       box-sizing: border-box;
       & > span {

@@ -2,10 +2,11 @@ import { useParams } from "react-router-dom";
 import LifeCodingPractice from "../components/Practice/LifeCodingPractice";
 
 function PracticePage() {
-  const subTopic = useParams().subtopic;
+  const { subtopic } = useParams();
+
   return (
     <div className="practice-container">
-      {subTopic ? <LifeCodingPractice /> : <div>This is Pratice Page</div>}
+      {subtopic === "lifecoding" ? <LifeCodingPractice /> : <div>No Page</div>}
     </div>
   );
 }
