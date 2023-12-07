@@ -1,6 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/Home";
 import AboutPage from "./pages/About";
+import PracticeListPage from "./pages/PracticeList";
+import PracticePage from "./pages/Practice";
 import NotFoundPage from "./pages/NotFound";
 import "./App.css";
 import Header from "./components/Header/Header";
@@ -13,6 +15,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/practice/:topic" element={<PracticeListPage />} />
+          <Route path="/practice/:topic/:subtopic" element={<PracticePage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>

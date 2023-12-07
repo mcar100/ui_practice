@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { MENU_BAR, PAGE_URL } from "../../utils/constants";
+import { MENU_BAR, NAV_URL } from "../../utils/constants";
 
 function HeaderNav() {
   const menuBar = MENU_BAR;
-  const pageURL = PAGE_URL;
+  const navURL = NAV_URL;
 
   return (
     <nav className="header-navbar">
@@ -11,7 +11,7 @@ function HeaderNav() {
         {menuBar.map((nav, idx) => {
           return (
             <li className="nav-item" key={`headerNav-${idx}`}>
-              <Link to={pageURL[idx]}>{nav}</Link>
+              <Link to={navURL[idx]}>{nav}</Link>
             </li>
           );
         })}

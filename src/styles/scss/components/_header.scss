@@ -1,2 +1,38 @@
 @use "../abstracts/variables" as c;
 @use "../abstracts/mixins" as mix;
+
+/* header-nav-container */
+.header-nav-container {
+  @include mix.box-style($w: 100%, $h: 100%, $bgc: inherit);
+  @include mix.gridbox($gtc: 5% 10% 70% 10% 5%);
+
+  .header-navbar {
+    grid-column: 3;
+    .nav-menu {
+      .nav-item {
+        & > a {
+          @include mix.font-style(15px, bold, c.$f-white);
+          margin: 0 10px;
+
+          &:hover {
+            opacity: 70%;
+          }
+        }
+      }
+    }
+  }
+
+  .header-login {
+    grid-column: 4;
+    @include mix.flexbox();
+
+    & > button {
+      @include mix.circle-button();
+      @include mix.box-style(35px, 35px, c.$f-white);
+
+      & > img {
+        @include mix.box-style(15px, 15px, inherit);
+      }
+    }
+  }
+}

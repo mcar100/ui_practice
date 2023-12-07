@@ -134,27 +134,106 @@ body {
 /* font-theme */
 /* situation  */
 /* buttons */
+/*practice-list components*/
+.project-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  width: 280px;
+  height: 80%;
+  background-color: #fff;
+}
+.project-list-container > h2 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #303030;
+}
+.project-list-container .project-list {
+  width: 80%;
+  height: 80%;
+  background-color: transparent;
+}
+.project-list-container .project-list > li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  width: 220px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid #303030;
+  border-radius: 3px;
+  background-color: #303030;
+  border-color: #303030;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.project-list-container .project-list > li > span {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0px;
+  width: 80%;
+  height: 100%;
+  background-color: transparent;
+}
+.project-list-container .project-list > li > a {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  background-color: #fff;
+  border-color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  color: #303030;
+  border: none;
+  border-radius: 100%;
+  padding: 3px;
+  text-align: center;
+  line-height: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  box-sizing: border-box;
+}
+.project-list-container .project-list > li > a:hover {
+  opacity: 90%;
+}
+
 /* header-nav-container */
 .header-nav-container {
   width: 100%;
   height: 100%;
   background-color: inherit;
   display: grid;
-  grid-template-columns: 10% 70% 10% 10%;
+  grid-template-columns: 5% 10% 70% 10% 5%;
   justify-content: center;
   align-items: center;
   gap: 0px;
 }
 .header-nav-container .header-navbar {
-  grid-column: 2;
+  grid-column: 3;
 }
 .header-nav-container .header-navbar .nav-menu .nav-item > a {
   font-size: 15px;
   font-weight: bold;
   color: #fff;
+  margin: 0 10px;
+}
+.header-nav-container .header-navbar .nav-menu .nav-item > a:hover {
+  opacity: 70%;
 }
 .header-nav-container .header-login {
-  grid-column: 3;
+  grid-column: 4;
   display: flex;
   flex-direction: row;
   justify-content: center;

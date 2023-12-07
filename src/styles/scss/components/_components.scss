@@ -1,32 +1,40 @@
 @use "../abstracts/variables" as c;
 @use "../abstracts/mixins" as mix;
 
-/* header-nav-container */
-.header-nav-container {
-  @include mix.box-style($w: 100%, $h: 100%, $bgc: inherit);
-  @include mix.gridbox($gtc: 10% 70% 10% 10%);
+/*practice-list components*/
+.project-list-container {
+  @include mix.flexbox(column);
+  @include mix.box-style(280px, 80%, c.$white);
 
-  .header-navbar {
-    grid-column: 2;
-    .nav-menu {
-      .nav-item {
-        & > a {
-          @include mix.font-style(15px, bold, c.$f-white);
-        }
-      }
-    }
+  & > h2 {
+    @include mix.font-style(25px, bold, c.$f-basic);
   }
 
-  .header-login {
-    grid-column: 3;
-    @include mix.flexbox();
+  & .project-list {
+    @include mix.box-style(80%, 80%, transparent);
 
-    & > button {
-      @include mix.circle-button();
-      @include mix.box-style(35px, 35px, c.$f-white);
+    & > li {
+      @include mix.flexbox();
+      @include mix.box-style(220px, 50px, transparent);
+      @include mix.border($r: 3px);
+      @include mix.box-color(c.$bar, c.$bar);
+      @include mix.font-style(15px, bold, c.$white);
+      @include mix.margin(5px);
+      @include mix.padding(10px);
+      box-sizing: border-box;
+      & > span {
+        @include mix.flexbox($jc: flex-start);
+        @include mix.box-style(80%, 100%, transparent);
+      }
 
-      & > img {
-        @include mix.box-style(15px, 15px, inherit);
+      & > a {
+        @include mix.box-style(30px, 30px, transparent);
+        @include mix.box-color(c.$white, c.$white);
+        @include mix.font-style(14px, bold, c.$f-basic);
+        @include mix.circle-button();
+        @include mix.padding(3px);
+        @include mix.font-center();
+        box-sizing: border-box;
       }
     }
   }
