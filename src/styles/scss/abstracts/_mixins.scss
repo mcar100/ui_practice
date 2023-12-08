@@ -143,6 +143,22 @@
   }
 }
 
+@mixin classic-button(
+  $w: 50px,
+  $h: 30px,
+  $bgc: c.$f-basic,
+  $fs: 12px,
+  $fc: c.$f-white,
+  $bw: none,
+  $bc: c.$bar,
+  $br: 3px
+) {
+  @include box-style($w, $h, $bgc);
+  @include font-style($fs, bold, $fc);
+  @include border($bw, solid, $bc, $br);
+  cursor: pointer;
+}
+
 @mixin background-image($url) {
   background-image: url($url);
   background-repeat: no-repeat;

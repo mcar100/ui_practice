@@ -5,5 +5,39 @@
   @include mix.box-style(70%, 80%, c.$white);
   @include mix.box-minSize(300px, 100px);
   @include mix.box-maxSize(800px, none);
+}
+
+.page-container {
+  @include mix.box-style(100%, 100%, inherit);
   @include mix.flexbox(column);
+  @include mix.padding(5px);
+
+  & > .btn-container {
+    flex: 8%;
+    @include mix.flexbox($g: 15px);
+    & > h4 {
+      @include mix.box-style(180px, 20px, inherit);
+    }
+
+    & > button {
+      @include mix.classic-button($w: 100px);
+    }
+  }
+
+  & > .contents-container {
+    flex: 92%;
+    @include mix.padding(5px);
+  }
+}
+
+/* lifecoding scss */
+.lf-container {
+  width: 300px;
+  height: 150px;
+  border: 5px solid black;
+  padding: 10px;
+
+  & > input {
+    @include mix.classic-button();
+  }
 }

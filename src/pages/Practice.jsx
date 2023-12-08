@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import LifeCodingPractice from "../components/Practice/LifeCodingPractice";
+import LifeCodingPractice from "../components/Practice/lifecoding/LifeCodingPractice";
 
 function PracticePage() {
   const { subtopic } = useParams();
