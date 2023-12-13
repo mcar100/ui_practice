@@ -1,24 +1,20 @@
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import LifeCodingAdvanced from "../components/Practice/lifecoding/advanced/LifeCodingAdvanced";
-import LifeCodingTutorial from "../components/Practice/lifecoding/tutorial/LifeCodingTutorial";
+import LifeCoding from "../components/Practice/lifecoding/LifeCoding";
 
 function PracticePage() {
-  const { subtopic, subtopic2 } = useParams();
-  let content;
+  const { subtopic } = useParams();
+  const [component, setComponent] = useState();
 
-  if (subtopic === "lifecoding") {
-    if (subtopic2 === "tutorial") {
-      content = <LifeCodingTutorial />;
-    } else if (subtopic2 === "advanced") {
-      content = <LifeCodingAdvanced />;
+  useEffect(() => {
+    if (subtopic === "lifecoding") {
+      setComponent(<LifeCoding />);
     } else {
-      content = <div>No Page</div>;
+      setComponent(<div>No Page</div>);
     }
-  } else {
-    content = <div>No Page</div>;
-  }
+  }, [subtopic]);
 
-  return <div className="practice-container">{content}</div>;
+  return <div className="practice-container">{component}</div>;
 }
 
 export default PracticePage;
