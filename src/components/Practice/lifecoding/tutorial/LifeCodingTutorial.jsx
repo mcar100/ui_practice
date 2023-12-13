@@ -1,6 +1,6 @@
 import { useState } from "react";
-import WithOutRedux from "./tutorial/WithOutRedux";
-import WithRedux from "./tutorial/WithRedux";
+import WithOutRedux from "./WithOutRedux";
+import WithRedux from "./WithRedux";
 
 /*
   date: 23.12.08
@@ -8,8 +8,11 @@ import WithRedux from "./tutorial/WithRedux";
   topic: 생활코딩 redux 강의에 나와있는 코드를 react 기반으로 재구현한 코드입니다.
   comment: 해당 강의는 4년전 강의로, 오래된 코드를 그대로 사용했습니다.
 */
-function LifeCodingPractice() {
-  const [mode, setMode] = useState(1);
+const WITH_REDUX = 1;
+const WITHOUT_REDUX = 2;
+
+function LifeCodingTutorial() {
+  const [mode, setMode] = useState(WITH_REDUX);
   const handleModeClick = (n) => {
     setMode(n);
   };
@@ -20,7 +23,7 @@ function LifeCodingPractice() {
           <h4>Redux Not Applied</h4>
           <button
             className="btn-mode-change"
-            onClick={() => handleModeClick(2)}
+            onClick={() => handleModeClick(WITHOUT_REDUX)}
           >
             with redux
           </button>
@@ -31,7 +34,7 @@ function LifeCodingPractice() {
           <h4>Redux Applied</h4>
           <button
             className="btn-mode-change"
-            onClick={() => handleModeClick(1)}
+            onClick={() => handleModeClick(WITH_REDUX)}
           >
             without redux
           </button>
@@ -47,4 +50,4 @@ function LifeCodingPractice() {
   );
 }
 
-export default LifeCodingPractice;
+export default LifeCodingTutorial;

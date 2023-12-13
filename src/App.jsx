@@ -16,7 +16,10 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/practice/:topic" element={<PracticeListPage />} />
-          <Route path="/practice/:topic/:subtopic" element={<PracticePage />} />
+          <Route
+            path="/practice/:topic/:subtopic/:subtopic2"
+            element={<PracticePage />}
+          />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
