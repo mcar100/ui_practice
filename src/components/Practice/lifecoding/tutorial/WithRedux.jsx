@@ -36,43 +36,40 @@ function WithRedux() {
 
   return (
     <div className="contents-container">
-      {" "}
-      <div className="contents-container">
-        <div id="red">
-          <div className="lf-container" id="component_red" style={myStyle}>
-            <h1>red</h1>
-            <input
-              type="button"
-              value="fire"
-              onClick={() => {
-                handleStateChange("red");
-              }}
-            />
-          </div>
+      <div id="red">
+        <div className="lf-container" id="component_red" style={myStyle}>
+          <h1>red</h1>
+          <input
+            type="button"
+            value="fire"
+            onClick={() => {
+              handleStateChange("red");
+            }}
+          />
         </div>
-        <div id="green">
-          <div className="lf-container" id="component_green" style={myStyle}>
-            <h1>green</h1>
-            <input
-              type="button"
-              value="fire"
-              onClick={() => {
-                handleStateChange("green");
-              }}
-            />
-          </div>
+      </div>
+      <div id="green">
+        <div className="lf-container" id="component_green" style={myStyle}>
+          <h1>green</h1>
+          <input
+            type="button"
+            value="fire"
+            onClick={() => {
+              handleStateChange("green");
+            }}
+          />
         </div>
-        <div id="blue">
-          <div className="lf-container" id="component_blue" style={myStyle}>
-            <h1>blue</h1>
-            <input
-              type="button"
-              value="fire"
-              onClick={() => {
-                handleStateChange("blue");
-              }}
-            />
-          </div>
+      </div>
+      <div id="blue">
+        <div className="lf-container" id="component_blue" style={myStyle}>
+          <h1>blue</h1>
+          <input
+            type="button"
+            value="fire"
+            onClick={() => {
+              handleStateChange("blue");
+            }}
+          />
         </div>
       </div>
     </div>
