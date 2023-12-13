@@ -2,6 +2,7 @@
 @use "../abstracts/mixins" as mix;
 
 .practice-container {
+  @include mix.position(relative);
   @include mix.box-style(70%, 80%, c.$white);
   @include mix.box-minSize(300px, 100px);
   @include mix.box-maxSize(800px, none);

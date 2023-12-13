@@ -1,4 +1,5 @@
 import { useState } from "react";
+import GoBack from "../../../Button/GoBackButton";
 import WithOutRedux from "./WithOutRedux";
 import WithRedux from "./WithRedux";
 
@@ -18,6 +19,7 @@ function LifeCodingTutorial() {
   };
   return (
     <div className="page-container">
+      <GoBack />
       {mode === 1 ? (
         <div className="btn-container">
           <h4>Redux Not Applied</h4>

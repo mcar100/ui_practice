@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import GoBackButton from "../components/Button/GoBackButton";
 import { PRACTICE_LIST } from "../utils/constants";
 
 function PracticeListPage() {
@@ -20,7 +21,9 @@ function PracticeListPage() {
 
   return (
     <div className="project-list-container">
+      <GoBackButton />
       <h2>{practiceTitle}</h2>
+
       <ul className="project-list">
         {topicList.map((topic, idx) => (
           <li key={`practice-${idx}`}>
