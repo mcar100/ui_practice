@@ -1,24 +1,32 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useStore } from "./storeContext";
 
 function NavList() {
   const store = useStore();
   const state = store.getState();
+  const [navList, setNavList] = useState(state.contents);
 
   const handleNavClick = (e, id) => {
     e.preventDefault();
-    const action = { type: "SELECT", id: id };
-    store.dispatch(action);
+    store.dispatch({ type: "SELECT", id: id });
   };
+
+  const handleNavListChange = () => {
+    const newState = store.getState();
+    setNavList([...newState.contents]);
+  };
+
+  store.subscribe(handleNavListChange);
 
   return (
     <nav className="nav-container">
       <ol>
-        {state.contents.map((content) => (
+        {navList.map((content) => (
           <li key={`content-${content.id}`}>
             <Link
+              to={`/${content.id}`}
               onClick={(e) => handleNavClick(e, content.id)}
-              to={content.id}
             >
               {content.title}
             </Link>

@@ -50,9 +50,15 @@
 
   & > .nav-container {
     @include mix.margin(12px);
+    & > ol > li:hover {
+      @include mix.font-style($fs: transparent);
+    }
   }
 
   & > .control-container {
     @include mix.margin(12px);
+    & > li:hover {
+      @include mix.font-style($fs: transparent);
+    }
   }
 }

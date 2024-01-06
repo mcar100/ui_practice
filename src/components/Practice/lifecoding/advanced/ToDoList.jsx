@@ -15,6 +15,7 @@ function ToDoList() {
   function reducer(state, action) {
     if (state === undefined) {
       return {
+        mode: "read",
         selected_id: 1,
         contents: [
           { id: 1, title: "HTML", desc: "HTML is .." },
@@ -26,7 +27,16 @@ function ToDoList() {
     let newState = {};
     if (action.type === "SELECT") {
       newState = { ...state, selected_id: action.id };
+    } else if (action.type === "CREATE") {
+      newState = { ...state, mode: "create" };
+    } else if (action.type === "SUBMIT") {
+      const newContents = state.contents;
+      newContents.push({ id: state.contents.length + 1, ...action.content });
+      newState = { ...state, mode: "read", contents: newContents };
+    } else if (action.type === "CANCEL") {
+      newState = { ...state, mode: "read" };
     }
+    console.log(newState);
     return newState;
   }
   return (

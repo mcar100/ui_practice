@@ -373,8 +373,18 @@ body {
 .todolist-container > .nav-container {
   margin: 12px;
 }
+.todolist-container > .nav-container > ol > li:hover {
+  font-size: transparent;
+  font-weight: bold;
+  color: #000;
+}
 .todolist-container > .control-container {
   margin: 12px;
+}
+.todolist-container > .control-container > li:hover {
+  font-size: transparent;
+  font-weight: bold;
+  color: #000;
 }
 
 .body-container {
