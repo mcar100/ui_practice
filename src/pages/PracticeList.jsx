@@ -28,7 +28,11 @@ function PracticeListPage() {
         {topicList.map((topic, idx) => (
           <li key={`practice-${idx}`}>
             <span>{topic}</span>
-            <Link to={topicUrlList[idx]}>Go</Link>
+            {topicUrlList[idx] !== undefined ? (
+              <Link to={topicUrlList[idx]}>Go</Link>
+            ) : (
+              <Link className="hidden-link"></Link>
+            )}
           </li>
         ))}
       </ul>

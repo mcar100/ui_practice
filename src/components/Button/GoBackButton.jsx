@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 function GoBackButton() {
   const navigate = useNavigate();
-  const content = "<";
+  const content = "◀";
   const handleGoBackClick = () => {
     navigate(-1);
   };

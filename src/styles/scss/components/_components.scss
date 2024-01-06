@@ -37,6 +37,10 @@
         @include mix.font-center();
         box-sizing: border-box;
       }
+
+      & > .hidden {
+        display: none;
+      }
     }
   }
 }

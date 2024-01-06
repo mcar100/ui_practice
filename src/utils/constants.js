@@ -10,6 +10,6 @@ export const PRACTICE_LIST = [
   {
     title: "Recoil",
     list: ["예정 없음"],
-    url: ["noting"],
+    url: [],
   },
 ];
