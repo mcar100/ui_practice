@@ -18,10 +18,14 @@ function Article() {
   // read mode
   const handleContentChange = () => {
     const newState = store.getState();
-    const newContent = newState.contents.find(
-      (content) => content.id === newState.selected_id
-    );
-    setContent({ title: newContent.title, desc: newContent.desc });
+    if (newState.contents.length > 0) {
+      const newContent = newState.contents.find(
+        (content) => content.id === newState.selected_id
+      );
+      setContent({ title: newContent.title, desc: newContent.desc });
+    } else {
+      setContent();
+    }
   };
 
   // create mode
@@ -64,7 +68,7 @@ function Article() {
               {content.desc}{" "}
             </div>
           ) : (
-            <div> select subject</div>
+            <div>no article</div>
           )}
         </article>
       ) : (

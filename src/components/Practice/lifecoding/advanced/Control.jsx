@@ -7,6 +7,9 @@ function Control() {
     e.preventDefault();
     store.dispatch({ type: "CREATE" });
   };
+  const handleDeleteClick = () => {
+    store.dispatch({ type: "DELETE" });
+  };
 
   return (
     <ul className="control-container">
@@ -16,7 +19,11 @@ function Control() {
         </Link>
       </li>
       <li>
-        <input type={"button"} value={"delete"}></input>
+        <input
+          type={"button"}
+          value={"delete"}
+          onClick={handleDeleteClick}
+        ></input>
       </li>
     </ul>
   );

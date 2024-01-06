@@ -21,6 +21,7 @@ function ToDoList() {
           { id: 1, title: "HTML", desc: "HTML is .." },
           { id: 2, title: "CSS", desc: "CSS is .." },
         ],
+        maxId: 2,
       };
     }
 
@@ -30,15 +31,31 @@ function ToDoList() {
     } else if (action.type === "CREATE") {
       newState = { ...state, mode: "create" };
     } else if (action.type === "SUBMIT") {
-      const newContents = state.contents;
-      newContents.push({ id: state.contents.length + 1, ...action.content });
-      newState = { ...state, mode: "read", contents: newContents };
+      const newId = state.maxId + 1;
+      const newContents = [...state.contents, { id: newId, ...action.content }];
+      newState = {
+        ...state,
+        mode: "read",
+        contents: newContents,
+        maxId: newId,
+        selected_id: newId,
+      };
     } else if (action.type === "CANCEL") {
       newState = { ...state, mode: "read" };
+    } else if (action.type === "DELETE") {
+      const newContents = state.contents.filter(
+        (content) => content.id !== state.selected_id
+      );
+      newState = {
+        ...state,
+        selected_id: newContents.length > 0 ? newContents[0].id : null,
+        contents: newContents,
+      };
     }
     console.log(newState);
     return newState;
   }
+
   return (
     <StoreProvider store={store}>
       {" "}
