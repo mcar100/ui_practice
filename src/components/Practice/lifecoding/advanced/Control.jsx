@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Control() {
   return (
-    <ul>
+    <ul className="control-container">
       <li>
         <Link>create</Link>
       </li>

@@ -48,6 +48,6 @@
 /* buttons */
 .go-back-btn {
   @include mix.position($t: 10px, $l: 10px);
-  @include mix.classic-button(20px, 20px, $fs: 8px);
+  @include mix.classic-button(25px, 25px, $fs: 10px);
   @include mix.circle-button();
 }

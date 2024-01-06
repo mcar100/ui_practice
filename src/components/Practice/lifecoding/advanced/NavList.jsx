@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function NavList() {
   return (
-    <nav>
+    <nav className="nav-container">
       <ol>
         <li>
           <Link>HTML</Link>

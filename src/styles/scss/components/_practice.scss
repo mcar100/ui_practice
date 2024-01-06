@@ -42,3 +42,17 @@
     @include mix.classic-button();
   }
 }
+
+.todolist-container {
+  & > header {
+    @include mix.font-style(20px);
+  }
+
+  & > .nav-container {
+    @include mix.margin(12px);
+  }
+
+  & > .control-container {
+    @include mix.margin(12px);
+  }
+}

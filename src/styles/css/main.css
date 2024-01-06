@@ -217,6 +217,9 @@ body {
 .project-list-container .project-list > li > a:hover {
   opacity: 90%;
 }
+.project-list-container .project-list > li > .hidden {
+  display: none;
+}
 
 /* buttons */
 .go-back-btn {
@@ -225,10 +228,10 @@ body {
   bottom: 0;
   left: 10px;
   right: 0;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   background-color: #303030;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: bold;
   color: #fff;
   border: none solid #303030;
@@ -360,6 +363,18 @@ body {
   border: none solid #303030;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.todolist-container > header {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+.todolist-container > .nav-container {
+  margin: 12px;
+}
+.todolist-container > .control-container {
+  margin: 12px;
 }
 
 .body-container {
