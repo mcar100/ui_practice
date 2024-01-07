@@ -33,32 +33,139 @@
 
 /* lifecoding scss */
 .lf-container {
-  width: 300px;
-  height: 150px;
+  @include mix.box-style(300px, 150px, inherit);
   border: 5px solid black;
-  padding: 10px;
+  @include mix.padding(10px);
 
   & > input {
     @include mix.classic-button();
   }
 }
 
-.todolist-container {
-  & > header {
-    @include mix.font-style(20px);
-  }
+@media screen and (max-height: 800px) {
+  .page-container {
+    overflow-y: auto;
 
-  & > .nav-container {
-    @include mix.margin(12px);
-    & > ol > li:hover {
-      @include mix.font-style($fs: transparent);
+    .lf-container {
+      @include mix.box-style(200px, 130px, inherit);
+      @include mix.flexbox($g: 10px);
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .page-container {
+    overflow-x: auto;
+  }
+}
+
+.todolist-container {
+  @include mix.box-style(500px, 90%);
+  @include mix.gridbox(
+    $a: "header control " "nav  article" "nav  article",
+    $gtr: 10% 90%,
+    $gtc: 20% 80%
+  );
+  & > header {
+    grid-area: header;
+    @include mix.box-style(100%, 100%);
+    @include mix.border-partial($b: 3px);
+    @include mix.padding($t: 10px, $l: 8px);
+    & > h3 {
+      @include mix.margin(0px);
     }
   }
 
   & > .control-container {
-    @include mix.margin(12px);
-    & > li:hover {
-      @include mix.font-style($fs: transparent);
+    grid-area: control;
+    @include mix.box-style(100%, 100%);
+    @include mix.flexbox($g: 15px);
+    @include mix.border-partial($b: 3px);
+    & > li {
+      @include mix.box-minSize(50px, 30px);
+
+      & > input[type="button"] {
+        @include mix.classic-button($w: 60px, $h: 25px);
+      }
+    }
+  }
+
+  & > .nav-container {
+    grid-area: nav;
+    @include mix.box-style(100%, 100%);
+    @include mix.border-partial($r: 3px);
+    @include mix.font-scroll();
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: c.$bar;
+      border-radius: 3px;
+    }
+
+    & > ol > li {
+      @include mix.box-style(100%, 30px);
+      @include mix.border-partial($b: 1px);
+      @include mix.font-overflow();
+      text-align: center;
+
+      & > a {
+        @include mix.font-style(18px, normal);
+        &:hover {
+          @include mix.font-style($fs: transparent);
+        }
+      }
+    }
+  }
+
+  & > .article-container {
+    @include mix.box-style(100%, 100%);
+    grid-area: article;
+    grid-column: 2/4;
+
+    & > article {
+      @include mix.box-style(inherit, inherit);
+      @include mix.flexbox();
+      & > .article-box {
+        @include mix.box-style(inherit, inherit);
+        @include mix.flexbox(column);
+
+        & > h2 {
+          flex: 10%;
+        }
+
+        & > p {
+          flex: 90%;
+          @include mix.font-wrap();
+          max-width: 300px;
+        }
+      }
+      & > form {
+        @include mix.flexbox(column, $g: 5px);
+        & > p {
+          & > .form-title {
+            @include mix.box-style(300px, 40px);
+            @include mix.font-style(20px);
+          }
+
+          & > textarea {
+            @include mix.box-style(295px, 300px);
+            @include mix.font-style(18px);
+            max-height: 300px;
+            resize: vertical;
+          }
+        }
+        & > p:last-child {
+          & > input[type="submit"] {
+            @include mix.classic-button($w: 80px, $h: 30px);
+            @include mix.margin($r: 4px);
+          }
+          & > input[type="button"] {
+            @include mix.classic-button($w: 80px, $h: 30px);
+            @include mix.margin($l: 4px);
+          }
+        }
+      }
     }
   }
 }

@@ -243,6 +243,9 @@ body {
 .go-back-btn:hover {
   opacity: 90%;
 }
+.go-back-btn:hover {
+  opacity: 90%;
+}
 
 /* header-nav-container */
 .header-nav-container {
@@ -341,6 +344,9 @@ body {
   border-radius: 3px;
   cursor: pointer;
 }
+.page-container > .btn-container > button:hover {
+  opacity: 90%;
+}
 .page-container > .contents-container {
   flex: 92%;
   padding: 5px;
@@ -350,6 +356,7 @@ body {
 .lf-container {
   width: 300px;
   height: 150px;
+  background-color: inherit;
   border: 5px solid black;
   padding: 10px;
 }
@@ -364,27 +371,232 @@ body {
   border-radius: 3px;
   cursor: pointer;
 }
+.lf-container > input:hover {
+  opacity: 90%;
+}
 
+@media screen and (max-height: 800px) {
+  .page-container {
+    overflow-y: auto;
+  }
+  .page-container .lf-container {
+    width: 200px;
+    height: 130px;
+    background-color: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .page-container {
+    overflow-x: auto;
+  }
+}
+.todolist-container {
+  width: 500px;
+  height: 90%;
+  background-color: #fff;
+  display: grid;
+  grid-template-areas: "header control " "nav  article" "nav  article";
+  grid-template-rows: 10% 90%;
+  grid-template-columns: 20% 80%;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
 .todolist-container > header {
+  grid-area: header;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-top: 0px solid #303030;
+  border-left: 0px solid #303030;
+  border-right: 0px solid #303030;
+  border-bottom: 3px solid #303030;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  padding-left: 8px;
+  padding-right: 0px;
+}
+.todolist-container > header > h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.todolist-container > .control-container {
+  grid-area: control;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-top: 0px solid #303030;
+  border-left: 0px solid #303030;
+  border-right: 0px solid #303030;
+  border-bottom: 3px solid #303030;
+}
+.todolist-container > .control-container > li {
+  min-width: 50px;
+  min-height: 30px;
+}
+.todolist-container > .control-container > li > input[type=button] {
+  width: 60px;
+  height: 25px;
+  background-color: #303030;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  border: none solid #303030;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.todolist-container > .control-container > li > input[type=button]:hover {
+  opacity: 90%;
+}
+.todolist-container > .nav-container {
+  grid-area: nav;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-top: 0px solid #303030;
+  border-left: 0px solid #303030;
+  border-right: 3px solid #303030;
+  border-bottom: 0px solid #303030;
+  overflow: auto;
+}
+.todolist-container > .nav-container::-webkit-scrollbar {
+  width: 8px;
+}
+.todolist-container > .nav-container::-webkit-scrollbar-thumb {
+  background-color: #303030;
+  border-radius: 3px;
+}
+.todolist-container > .nav-container > ol > li {
+  width: 100%;
+  height: 30px;
+  background-color: #fff;
+  border-top: 0px solid #303030;
+  border-left: 0px solid #303030;
+  border-right: 0px solid #303030;
+  border-bottom: 1px solid #303030;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+.todolist-container > .nav-container > ol > li > a {
+  font-size: 18px;
+  font-weight: normal;
+  color: #000;
+}
+.todolist-container > .nav-container > ol > li > a:hover {
+  font-size: transparent;
+  font-weight: bold;
+  color: #000;
+}
+.todolist-container > .article-container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  grid-area: article;
+  grid-column: 2/4;
+}
+.todolist-container > .article-container > article {
+  width: inherit;
+  height: inherit;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+.todolist-container > .article-container > article > .article-box {
+  width: inherit;
+  height: inherit;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+.todolist-container > .article-container > article > .article-box > h2 {
+  flex: 10%;
+}
+.todolist-container > .article-container > article > .article-box > p {
+  flex: 90%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  max-width: 300px;
+}
+.todolist-container > .article-container > article > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.todolist-container > .article-container > article > form > p > .form-title {
+  width: 300px;
+  height: 40px;
+  background-color: #fff;
   font-size: 20px;
   font-weight: bold;
   color: #000;
 }
-.todolist-container > .nav-container {
-  margin: 12px;
-}
-.todolist-container > .nav-container > ol > li:hover {
-  font-size: transparent;
+.todolist-container > .article-container > article > form > p > textarea {
+  width: 295px;
+  height: 300px;
+  background-color: #fff;
+  font-size: 18px;
   font-weight: bold;
   color: #000;
+  max-height: 300px;
+  resize: vertical;
 }
-.todolist-container > .control-container {
-  margin: 12px;
-}
-.todolist-container > .control-container > li:hover {
-  font-size: transparent;
+.todolist-container > .article-container > article > form > p:last-child > input[type=submit] {
+  width: 80px;
+  height: 30px;
+  background-color: #303030;
+  font-size: 12px;
   font-weight: bold;
-  color: #000;
+  color: #fff;
+  border: none solid #303030;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 4px;
+}
+.todolist-container > .article-container > article > form > p:last-child > input[type=submit]:hover {
+  opacity: 90%;
+}
+.todolist-container > .article-container > article > form > p:last-child > input[type=button] {
+  width: 80px;
+  height: 30px;
+  background-color: #303030;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  border: none solid #303030;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 4px;
+  margin-right: 0px;
+}
+.todolist-container > .article-container > article > form > p:last-child > input[type=button]:hover {
+  opacity: 90%;
 }
 
 .body-container {

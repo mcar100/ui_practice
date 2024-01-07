@@ -1,8 +1,7 @@
 function Subject() {
   return (
     <header>
-      <h1>WEB</h1>
-      Hello, WEB!
+      <h3>ToDoList</h3>
     </header>
   );
 }

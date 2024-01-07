@@ -63,6 +63,21 @@
   @include flexbox();
 }
 
+@mixin font-overflow() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin font-wrap() {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+@mixin font-scroll() {
+  overflow: auto;
+}
+
 // /* border */
 @mixin border($w: 1px, $s: solid, $c: c.$bar, $r: 1px) {
   border: $w $s $c;
@@ -74,6 +89,20 @@
   border-top-right-radius: $tr;
   border-bottom-left-radius: $bl;
   border-bottom-right-radius: $br;
+}
+
+@mixin border-partial(
+  $t: 0px,
+  $l: 0px,
+  $r: 0px,
+  $b: 0px,
+  $s: solid,
+  $c: c.$bar
+) {
+  border-top: $t $s $c;
+  border-left: $l $s $c;
+  border-right: $r $s $c;
+  border-bottom: $b $s $c;
 }
 
 // /* flex */
@@ -157,6 +186,10 @@
   @include font-style($fs, bold, $fc);
   @include border($bw, solid, $bc, $br);
   cursor: pointer;
+
+  &:hover {
+    opacity: 90%;
+  }
 }
 
 @mixin background-image($url) {

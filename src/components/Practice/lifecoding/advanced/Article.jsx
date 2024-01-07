@@ -79,15 +79,15 @@ function Article() {
   });
 
   return (
-    <div>
+    <div className="article-container">
       {" "}
       {mode === "read" ? (
         <article>
           {content ? (
-            <div>
+            <div className="article-box">
               {" "}
-              <h2>{content.title}</h2>
-              {content.desc}{" "}
+              <h2 className="article-title">{content.title}</h2>
+              <p className="article-desc">{content.desc}</p>{" "}
             </div>
           ) : (
             <div>no article</div>
@@ -101,8 +101,9 @@ function Article() {
             <p>
               <input
                 type={"text"}
+                className="form-title"
                 name="title"
-                placeholder="title"
+                placeholder="제목"
                 onChange={handleTitleChange}
                 value={title}
               />
@@ -110,7 +111,7 @@ function Article() {
             <p>
               <textarea
                 name="desc"
-                placeholder="description"
+                placeholder="내용"
                 onChange={handleDescChange}
                 value={description}
               ></textarea>
@@ -118,7 +119,7 @@ function Article() {
             <p>
               <input
                 type={"submit"}
-                value={mode === "create" ? "제출" : "수정"}
+                value={mode === "create" ? "제출" : "수정 완료"}
               />
               <input
                 type={"button"}

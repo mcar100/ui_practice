@@ -1,10 +1,8 @@
-import { Link } from "react-router-dom";
 import { useStore } from "./storeContext";
 
 function Control() {
   const store = useStore();
-  const handleCreateClick = (e) => {
-    e.preventDefault();
+  const handleCreateClick = () => {
     store.dispatch({ type: "CREATE" });
   };
   const handleDeleteClick = () => {
@@ -20,21 +18,23 @@ function Control() {
   return (
     <ul className="control-container">
       <li>
-        <Link to="/create" onClick={handleCreateClick}>
-          create
-        </Link>
+        <input
+          type={"button"}
+          value={"작성"}
+          onClick={handleCreateClick}
+        ></input>
       </li>
       <li>
         <input
           type={"button"}
-          value={"modify"}
+          value={"수정"}
           onClick={handleModifyClick}
         ></input>
       </li>
       <li>
         <input
           type={"button"}
-          value={"delete"}
+          value={"삭제"}
           onClick={handleDeleteClick}
         ></input>
       </li>
