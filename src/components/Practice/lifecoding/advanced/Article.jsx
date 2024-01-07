@@ -6,12 +6,25 @@ function Article() {
   const state = store.getState();
   const [mode, setMode] = useState(state.mode);
   const [content, setContent] = useState(state.contents[0]);
-  const [title, setTitle] = useState();
-  const [description, setDescription] = useState();
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
 
   // change mode
   const handleModeChange = () => {
     const newState = store.getState();
+
+    if (title !== "" || description !== "") {
+      setTitle("");
+      setDescription("");
+    }
+
+    if (newState.mode === "modify") {
+      const oldContent = newState.contents.find(
+        (content) => content.id === newState.selected_id
+      );
+      setTitle(oldContent.title);
+      setDescription(oldContent.desc);
+    }
     setMode(newState.mode);
   };
 
@@ -32,7 +45,7 @@ function Article() {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     store.dispatch({
-      type: "SUBMIT",
+      type: "CREATE_SUBMIT",
       content: { title: title, desc: description },
     });
   };
@@ -47,6 +60,15 @@ function Article() {
 
   const handleDescChange = (e) => {
     setDescription(e.target.value);
+  };
+
+  // modify mode
+  const handleFormModify = (e) => {
+    e.preventDefault();
+    store.dispatch({
+      type: "MODIFY_SUBMIT",
+      content: { title: title, desc: description },
+    });
   };
 
   // subscribe
@@ -73,13 +95,16 @@ function Article() {
         </article>
       ) : (
         <article>
-          <form onSubmit={handleFormSubmit}>
+          <form
+            onSubmit={mode === "create" ? handleFormSubmit : handleFormModify}
+          >
             <p>
               <input
                 type={"text"}
                 name="title"
                 placeholder="title"
                 onChange={handleTitleChange}
+                value={title}
               />
             </p>
             <p>
@@ -87,10 +112,14 @@ function Article() {
                 name="desc"
                 placeholder="description"
                 onChange={handleDescChange}
+                value={description}
               ></textarea>
             </p>
             <p>
-              <input type={"submit"} />
+              <input
+                type={"submit"}
+                value={mode === "create" ? "제출" : "수정"}
+              />
               <input
                 type={"button"}
                 value={"취소"}
