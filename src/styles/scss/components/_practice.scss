@@ -59,6 +59,7 @@
   }
 }
 
+/* lifecoding-advanced scss */
 .todolist-container {
   @include mix.box-style(500px, 90%);
   @include mix.gridbox(
@@ -176,6 +177,43 @@
             @include mix.classic-button($w: 80px, $h: 30px);
             @include mix.margin($l: 4px);
           }
+        }
+      }
+    }
+  }
+}
+
+/* lifecoding tutorial2 scss */
+#tutorial2-container,
+#tutorial2-container div {
+  @include mix.border(5px, solid, c.$bar);
+  @include mix.margin(5px);
+
+  & > .grid {
+    @include mix.gridbox($a: "left right", $gtc: 50% 50%);
+
+    & > div:nth-child(1) {
+      @include mix.border(5px, solid, red);
+      @include mix.margin(5px);
+      grid-area: left;
+
+      & div {
+        @include mix.border(5px, solid, red);
+        @include mix.margin(5px);
+      }
+    }
+
+    & > div:nth-child(2) {
+      @include mix.border(5px, solid, blue);
+      @include mix.margin(5px);
+      grid-area: right;
+
+      & div {
+        @include mix.border(5px, solid, blue);
+        @include mix.margin(5px);
+
+        & input[type="button"] {
+          @include mix.classic-button(35px, 35px, $bgc: inherit, $fc: c.$bar);
         }
       }
     }

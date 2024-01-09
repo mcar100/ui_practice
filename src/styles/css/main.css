@@ -419,6 +419,7 @@ body {
     overflow-x: auto;
   }
 }
+/* lifecoding-advanced scss */
 .todolist-container {
   width: 500px;
   height: 90%;
@@ -654,6 +655,75 @@ body {
   opacity: 30%;
 }
 .todolist-container > .article-container > article > form > p:last-child > input[type=button]:disabled:hover {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+
+/* lifecoding tutorial2 scss */
+#tutorial2-container,
+#tutorial2-container div {
+  border: 5px solid #303030;
+  border-radius: 1px;
+  margin: 5px;
+}
+#tutorial2-container > .grid,
+#tutorial2-container div > .grid {
+  display: grid;
+  grid-template-areas: "left right";
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+#tutorial2-container > .grid > div:nth-child(1),
+#tutorial2-container div > .grid > div:nth-child(1) {
+  border: 5px solid red;
+  border-radius: 1px;
+  margin: 5px;
+  grid-area: left;
+}
+#tutorial2-container > .grid > div:nth-child(1) div,
+#tutorial2-container div > .grid > div:nth-child(1) div {
+  border: 5px solid red;
+  border-radius: 1px;
+  margin: 5px;
+}
+#tutorial2-container > .grid > div:nth-child(2),
+#tutorial2-container div > .grid > div:nth-child(2) {
+  border: 5px solid blue;
+  border-radius: 1px;
+  margin: 5px;
+  grid-area: right;
+}
+#tutorial2-container > .grid > div:nth-child(2) div,
+#tutorial2-container div > .grid > div:nth-child(2) div {
+  border: 5px solid blue;
+  border-radius: 1px;
+  margin: 5px;
+}
+#tutorial2-container > .grid > div:nth-child(2) div input[type=button],
+#tutorial2-container div > .grid > div:nth-child(2) div input[type=button] {
+  width: 35px;
+  height: 35px;
+  background-color: inherit;
+  font-size: 12px;
+  font-weight: bold;
+  color: #303030;
+  border: none solid #303030;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#tutorial2-container > .grid > div:nth-child(2) div input[type=button]:hover,
+#tutorial2-container div > .grid > div:nth-child(2) div input[type=button]:hover {
+  opacity: 90%;
+}
+#tutorial2-container > .grid > div:nth-child(2) div input[type=button]:disabled,
+#tutorial2-container div > .grid > div:nth-child(2) div input[type=button]:disabled {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+#tutorial2-container > .grid > div:nth-child(2) div input[type=button]:disabled:hover,
+#tutorial2-container div > .grid > div:nth-child(2) div input[type=button]:disabled:hover {
   cursor: not-allowed;
   opacity: 30%;
 }
