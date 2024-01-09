@@ -5,11 +5,16 @@ import { useStore } from "./storeContext";
 function NavList() {
   const store = useStore();
   const state = store.getState();
+  const [isDisabled, setIsDisabled] = useState(
+    state.mode === "read" ? false : true
+  );
   const [navList, setNavList] = useState(state.contents);
 
   const handleNavClick = (e, id) => {
     e.preventDefault();
-    store.dispatch({ type: "SELECT", id: id });
+    if (!isDisabled) {
+      store.dispatch({ type: "SELECT", id: id });
+    }
   };
 
   const handleNavListChange = () => {
@@ -17,7 +22,16 @@ function NavList() {
     setNavList([...newState.contents]);
   };
 
-  store.subscribe(handleNavListChange);
+  // change mode
+  const handleModeChange = () => {
+    const newState = store.getState();
+    setIsDisabled(newState.mode === "read" ? false : true);
+  };
+
+  store.subscribe(() => {
+    handleNavListChange();
+    handleModeChange();
+  });
 
   return (
     <nav className="nav-container">
@@ -25,6 +39,7 @@ function NavList() {
         {navList.map((content) => (
           <li key={`content-${content.id}`}>
             <Link
+              className={isDisabled ? "disabled" : ""}
               to={`/${content.id}`}
               onClick={(e) => handleNavClick(e, content.id)}
             >

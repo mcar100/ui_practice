@@ -243,6 +243,14 @@ body {
 .go-back-btn:hover {
   opacity: 90%;
 }
+.go-back-btn:disabled {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+.go-back-btn:disabled:hover {
+  cursor: not-allowed;
+  opacity: 30%;
+}
 .go-back-btn:hover {
   opacity: 90%;
 }
@@ -347,6 +355,14 @@ body {
 .page-container > .btn-container > button:hover {
   opacity: 90%;
 }
+.page-container > .btn-container > button:disabled {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+.page-container > .btn-container > button:disabled:hover {
+  cursor: not-allowed;
+  opacity: 30%;
+}
 .page-container > .contents-container {
   flex: 92%;
   padding: 5px;
@@ -373,6 +389,14 @@ body {
 }
 .lf-container > input:hover {
   opacity: 90%;
+}
+.lf-container > input:disabled {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+.lf-container > input:disabled:hover {
+  cursor: not-allowed;
+  opacity: 30%;
 }
 
 @media screen and (max-height: 800px) {
@@ -460,6 +484,14 @@ body {
 .todolist-container > .control-container > li > input[type=button]:hover {
   opacity: 90%;
 }
+.todolist-container > .control-container > li > input[type=button]:disabled {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+.todolist-container > .control-container > li > input[type=button]:disabled:hover {
+  cursor: not-allowed;
+  opacity: 30%;
+}
 .todolist-container > .nav-container {
   grid-area: nav;
   width: 100%;
@@ -500,6 +532,17 @@ body {
   font-size: transparent;
   font-weight: bold;
   color: #000;
+}
+.todolist-container > .nav-container > ol > li > a.disabled {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+.todolist-container > .nav-container > ol > li > a.disabled:hover {
+  font-size: 18px;
+  font-weight: normal;
+  color: #000;
+  cursor: not-allowed;
+  opacity: 30%;
 }
 .todolist-container > .article-container {
   width: 100%;
@@ -580,6 +623,14 @@ body {
 .todolist-container > .article-container > article > form > p:last-child > input[type=submit]:hover {
   opacity: 90%;
 }
+.todolist-container > .article-container > article > form > p:last-child > input[type=submit]:disabled {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+.todolist-container > .article-container > article > form > p:last-child > input[type=submit]:disabled:hover {
+  cursor: not-allowed;
+  opacity: 30%;
+}
 .todolist-container > .article-container > article > form > p:last-child > input[type=button] {
   width: 80px;
   height: 30px;
@@ -597,6 +648,14 @@ body {
 }
 .todolist-container > .article-container > article > form > p:last-child > input[type=button]:hover {
   opacity: 90%;
+}
+.todolist-container > .article-container > article > form > p:last-child > input[type=button]:disabled {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+.todolist-container > .article-container > article > form > p:last-child > input[type=button]:disabled:hover {
+  cursor: not-allowed;
+  opacity: 30%;
 }
 
 .body-container {

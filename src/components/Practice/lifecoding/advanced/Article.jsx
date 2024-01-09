@@ -44,10 +44,12 @@ function Article() {
   // create mode
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    store.dispatch({
-      type: "CREATE_SUBMIT",
-      content: { title: title, desc: description },
-    });
+    if (title !== "" && description !== "") {
+      store.dispatch({
+        type: "CREATE_SUBMIT",
+        content: { title: title, desc: description },
+      });
+    }
   };
 
   const handleFormCancle = () => {
@@ -65,10 +67,12 @@ function Article() {
   // modify mode
   const handleFormModify = (e) => {
     e.preventDefault();
-    store.dispatch({
-      type: "MODIFY_SUBMIT",
-      content: { title: title, desc: description },
-    });
+    if (title !== "" && description !== "") {
+      store.dispatch({
+        type: "MODIFY_SUBMIT",
+        content: { title: title, desc: description },
+      });
+    }
   };
 
   // subscribe
