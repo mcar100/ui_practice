@@ -7,6 +7,7 @@ function WithReduxToolkit() {
   return (
     <Provider store={store}>
       <div className="contents-container">
+        <h1>Redux-Toolkit Applied</h1>
         <Counter />
       </div>
     </Provider>

@@ -736,7 +736,7 @@ body {
   text-align: center;
 }
 .tutorial3-container > div {
-  width: 200px;
+  width: 90%;
   height: 200px;
   background-color: #fff;
   display: flex;
@@ -746,7 +746,7 @@ body {
   gap: 0px;
   border: 5px solid #303030;
   border-radius: 1px;
-  margin: 5px;
+  margin: 15px;
 }
 .tutorial3-container > div > input[type=text] {
   width: 60px;

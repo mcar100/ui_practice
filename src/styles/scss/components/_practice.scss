@@ -226,10 +226,10 @@
   @include mix.margin(5px);
   text-align: center;
   & > div {
-    @include mix.box-style(200px, 200px);
+    @include mix.box-style(90%, 200px);
     @include mix.flexbox();
     @include mix.border(5px, solid, c.$bar);
-    @include mix.margin(5px);
+    @include mix.margin(15px);
 
     & > input[type="text"] {
       @include mix.box-style(60px, 35px);
