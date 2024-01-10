@@ -1,6 +1,15 @@
+import React from "react";
+import { Provider } from "react-redux";
+import store from "./store";
+import Counter from "./Counter";
+
 function WithReduxToolkit() {
   return (
-    <div className="contents-container">this is reduxtoolkit practice</div>
+    <Provider store={store}>
+      <div className="contents-container">
+        <Counter />
+      </div>
+    </Provider>
   );
 }
 

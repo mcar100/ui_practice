@@ -219,3 +219,25 @@
     }
   }
 }
+
+/* lifecoding tutorial3 scss */
+.tutorial3-container {
+  @include mix.border(5px, solid, c.$bar);
+  @include mix.margin(5px);
+  text-align: center;
+  & > div {
+    @include mix.box-style(200px, 200px);
+    @include mix.flexbox();
+    @include mix.border(5px, solid, c.$bar);
+    @include mix.margin(5px);
+
+    & > input[type="text"] {
+      @include mix.box-style(60px, 35px);
+    }
+
+    & > button {
+      @include mix.classic-button(35px, 35px);
+      @include mix.margin(5px);
+    }
+  }
+}
