@@ -6,6 +6,7 @@ import WithOutRedux from "./tutorial/WithOutRedux";
 import WithRedux from "./tutorial/WithRedux";
 import WithOutReactRedux from "./tutorial2/WithOutReactRedux";
 import WithReactRedux from "./tutorial2/WithReactRedux";
+import WithReduxToolkit from "./tutorial3/WithReduxToolkit";
 
 /*
   date: 24.01.09
@@ -23,6 +24,7 @@ const WITHOUT_REDUX = 1;
 const WITH_REDUX = 2;
 const WITHOUT_REACT_REDUX = 3;
 const WITH_REACT_REDUX = 4;
+const WITH_REACT_REDUX2 = 5;
 
 function LifeCoding() {
   const [mode, setMode] = useState(WITHOUT_REDUX);
@@ -45,6 +47,8 @@ function LifeCoding() {
       } else {
         setComponent(<WithReactRedux />);
       }
+    } else if (subtopic2 === "tutorial3") {
+      setComponent(<WithReduxToolkit />);
     } else {
       setComponent(<div>No Page</div>);
     }
