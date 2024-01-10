@@ -4,12 +4,7 @@ export const PRACTICE_URL = ["redux", "recoil"];
 export const PRACTICE_LIST = [
   {
     title: "Redux",
-    list: [
-      "생활코딩_연습1",
-      "생활코딩_심화1",
-      "생활코딩_연습2",
-      "생활코딩_연습3",
-    ],
+    list: ["Redux - 1", "Redux - 2", "React Redux - 1", "Redux Toolkit - 1"],
     url: [
       "lifecoding/tutorial1",
       "lifecoding/advanced1",
