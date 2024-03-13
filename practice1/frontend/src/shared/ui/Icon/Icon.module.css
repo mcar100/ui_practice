@@ -1,0 +1,54 @@
+.root {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.root:hover {
+  background-color: rgba(221, 221, 221, 0.8666666667);
+}
+.root_disabled {
+  cursor: default;
+}
+.root_disabled:hover {
+  background-color: transparent;
+}
+.root_size_s {
+  padding: 10px;
+}
+.root_size_m {
+  padding: 7px;
+}
+.root_size_l {
+  width: 54px;
+  height: 54px;
+}
+.root > .icon {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 26px;
+}
+.root > .icon_image {
+  background-image: url("https://pm.pstatic.net/resources/asset/sp_main.ae81c9d5.png");
+  background-repeat: no-repeat;
+  background-size: 444px 434px;
+  background-color: transparent;
+}
+.root > .icon_size_s {
+  width: 26px;
+  height: 26px;
+}
+.root > .icon_size_m {
+  width: 32px;
+  height: 32px;
+}
+.root > .icon_size_l {
+  width: 44px;
+  height: 44px;
+  margin: 2px;
+}
+.root > .icon_size_xl {
+  width: 48px;
+  height: 48px;
+}
