@@ -1,3 +1,10 @@
+import { Layout } from "shared/ui";
+import { LayoutHeader } from "widgets/LayoutHeader";
+
 export function Home() {
-  return <div>hello world</div>;
+  return (
+    <Layout type="wrap">
+      <LayoutHeader />
+    </Layout>
+  );
 }

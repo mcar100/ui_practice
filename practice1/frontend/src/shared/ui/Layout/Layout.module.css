@@ -1,0 +1,8 @@
+.root.wrap {
+  min-width: 1340px;
+}
+.root.header {
+  position: relative;
+  width: 1280px;
+  margin: 0 auto;
+}

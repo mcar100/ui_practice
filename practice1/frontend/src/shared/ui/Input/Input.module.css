@@ -1,0 +1,19 @@
+.root {
+  border: 0;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: -0.4px;
+  padding: 19px 0 15px 0;
+}
+.root:focus {
+  caret: 3px;
+}
+.root::-moz-placeholder {
+  color: #dbdada;
+  font-weight: lighter;
+}
+.root::placeholder {
+  color: #dbdada;
+  font-weight: lighter;
+}

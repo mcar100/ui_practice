@@ -1,29 +1,130 @@
 {
   "icons1": {
-    "imagePos": {
-      "menu": "-314px -330px",
-      "pay": "-295px -177px",
-      "talk": "-364px -81px",
-      "notify": "-364px -27px",
-      "keyboard": "-199px -254px",
-      "arrow_down": "-102px -272px",
-      "mail": "-250px -90px;",
-      "cafe": "-250px 0px",
-      "blog": "-201px -98px",
-      "shopping": "-90px -209px",
-      "news": "0px -209px",
-      "stock": "-180px -209px",
-      "real": "-45px -209px",
-      "map": "-201px 0px",
-      "webtoon": "-225px -209px",
-      "more": "-250px -135px",
-      "papago_text": "-56px -254px",
-      "papago_box": "0px 0px"
-    }
-  },
-  "icons2": {
+    "menu": {
+      "id": 1,
+      "korean_name": "메뉴",
+      "image_url": "https://pm.pstatic.net/resources/asset/sp_main.ae81c9d5.png",
+      "image_pos": "-314px -330px"
+    },
+    "pay": {
+      "id": 2,
+      "korean_name": "네이버페이",
+      "image_url": "https://pm.pstatic.net/resources/asset/sp_main.ae81c9d5.png",
+      "image_pos": "-295px -177px"
+    },
+    "talk": {
+      "id": 3,
+      "korean_name": "네이버톡",
+      "image_url": "https://pm.pstatic.net/resources/asset/sp_main.ae81c9d5.png",
+      "image_pos": "-364px -81px"
+    },
+    "notify": {
+      "id": 4,
+      "korean_name": "알림&혜택",
+      "image_url": "https://pm.pstatic.net/resources/asset/sp_main.ae81c9d5.png",
+      "image_pos": "-364px -27px"
+    },
+    "keyboard": {
+      "id": 5,
+      "korean_name": "입력도구",
+      "image_url": "https://pm.pstatic.net/resources/asset/sp_main.ae81c9d5.png",
+      "image_pos": "-199px -254px"
+    },
+    "arrow_down": {
+      "id": 6,
+      "korean_name": "화살표1",
+      "image_url": "https://pm.pstatic.net/resources/asset/sp_main.ae81c9d5.png",
+      "image_pos": "-102px -272px"
+    },
+    "mail": {
+      "id": 7,
+      "korean_name": "메일",
+      "image_url": "https://pm.pstatic.net/resources/asset/sp_main.ae81c9d5.png",
+      "image_pos": "-250px -90px"
+    },
+    "cafe": {
+      "id": 8,
+      "korean_name": "카페",
+      "image_url": "https://pm.pstatic.net/resources/asset/sp_main.ae81c9d5.png",
+      "image_pos": "-250px 0px"
+    },
+    "blog": {
+      "id": 9,
+      "korean_name": "블로그",
+      "image_url": "https://pm.pstatic.net/resources/asset/sp_main.ae81c9d5.png",
+      "image_pos": "-201px -98px"
+    },
+    "shopping": {
+      "id": 10,
+      "korean_name": "쇼핑",
+      "image_url": "https://pm.pstatic.net/resources/asset/sp_main.ae81c9d5.png",
+      "image_pos": "-90px -209px"
+    },
+    "news": {
+      "id": 11,
+      "korean_name": "뉴스",
+      "image_url": "https://pm.pstatic.net/resources/asset/sp_main.ae81c9d5.png",
+      "image_pos": "0px -209px"
+    },
+    "stock": {
+      "id": 12,
+      "korean_name": "증권",
+      "image_url": "https://pm.pstatic.net/resources/asset/sp_main.ae81c9d5.png",
+      "image_pos": "-180px -209px"
+    },
+    "real": {
+      "id": 13,
+      "korean_name": "부동산",
+      "image_url": "https://pm.pstatic.net/resources/asset/sp_main.ae81c9d5.png",
+      "image_pos": "-45px -209px"
+    },
+    "map": {
+      "id": 14,
+      "korean_name": "지도",
+      "image_url": "https://pm.pstatic.net/resources/asset/sp_main.ae81c9d5.png",
+      "image_pos": "-201px 0px"
+    },
+    "webtoon": {
+      "id": 15,
+      "korean_name": "웹툰",
+      "image_url": "https://pm.pstatic.net/resources/asset/sp_main.ae81c9d5.png",
+      "image_pos": "-225px -209px"
+    },
+    "more": {
+      "id": 16,
+      "korean_name": "",
+      "image_url": "https://pm.pstatic.net/resources/asset/sp_main.ae81c9d5.png",
+      "image_pos": "-250px -135px"
+    },
+    "papago_text": {
+      "id": 17,
+      "korean_name": "파파고텍스트",
+      "image_url": "https://pm.pstatic.net/resources/asset/sp_main.ae81c9d5.png",
+      "image_pos": "-56px -254px"
+    },
+    "papago_box": {
+      "id": 18,
+      "korean_name": "파파고그림",
+      "image_url": "https://pm.pstatic.net/resources/asset/sp_main.ae81c9d5.png",
+      "image_pos": "0px 0px"
+    },
+    "naver_logo": {
+      "id": 19,
+      "korean_name": "네이버로고",
+      "image_url": "https://pm.pstatic.net/resources/asset/sp_main.ae81c9d5.png",
+      "image_pos": "-391px 0px"
+    },
+    "search": {
+      "id": 20,
+      "korean_name": "검색",
+      "image_url": "https://pm.pstatic.net/resources/asset/sp_main.ae81c9d5.png",
+      "image_pos": "-365px -185px"
+    },
     "chijijik": {
-      "imageUrl": "https://s.pstatic.net/static/www/mobile/edit/20240112_1095/upload_1705057885416AaxUM.png"
+      "id": 21,
+      "korean_name": "치지직",
+      "image_url": "https://s.pstatic.net/static/www/mobile/edit/20240112_1095/upload_1705057885416AaxUM.png",
+      "image_pos": "0 0"
     }
   }
 }

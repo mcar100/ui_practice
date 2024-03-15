@@ -1,0 +1,49 @@
+.shortcut_area {
+  position: relative;
+  width: 676px;
+  margin: 72px auto 0;
+}
+.shortcut_area > ul {
+  display: flex;
+}
+.shortcut_area > ul > li {
+  display: list-item;
+}
+.shortcut_area > ul > li > a {
+  position: relative;
+  display: block;
+  width: 61.5px;
+  height: 75px;
+}
+.shortcut_area > ul > li > a > div {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  background-image: url(https://pm.pstatic.net/resources/asset/sp_main.74b52318.png);
+  background-size: 444px 434px;
+  background-position: 0px -128px;
+  background-repeat: no-repeat;
+  border-radius: 0;
+}
+.shortcut_area > ul > li > a > div > div,
+.shortcut_area > ul > li > a > div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.shortcut_area > ul > li > a > div:hover {
+  background-color: transparent;
+  background-position: -144px -1px;
+}
+.shortcut_area > ul > li > a > span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 1px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 14.7px;
+}

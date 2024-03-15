@@ -5,12 +5,20 @@ import { IconSizeType, ImageType } from "./type";
 type IconProps = {
   onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
   size: IconSizeType;
-  iconPos?: string;
-  image?: ImageType;
+  iconPos: string;
+  image: string;
+  hasOtherImage?: true;
   disabled?: boolean;
 };
 
-export function Icon({ onClick, size, image, iconPos, disabled }: IconProps) {
+export function Icon({
+  onClick,
+  size,
+  image,
+  iconPos,
+  hasOtherImage,
+  disabled,
+}: IconProps) {
   return (
     <div
       className={cn(
@@ -20,18 +28,20 @@ export function Icon({ onClick, size, image, iconPos, disabled }: IconProps) {
       )}
       onClick={onClick}
     >
-      <button
-        className={cn(css.icon, css.icon_image, css[`icon_size_${size}`])}
-        style={
-          image
-            ? {
-                backgroundImage: image.imageUrl,
-                backgroundPosition: image.imagePos,
-                backgroundSize: image.imageSize,
-              }
-            : { backgroundPosition: iconPos }
-        }
-      ></button>
+      {!hasOtherImage ? (
+        <div
+          className={cn(css.icon, css.icon_image, css[`icon_size_${size}`])}
+          style={{
+            backgroundPosition: iconPos,
+            backgroundImage: `url(${image})`,
+          }}
+        ></div>
+      ) : (
+        <img
+          className={cn(css.icon, css.icon_image, css[`icon_size_${size}`])}
+          src={image}
+        />
+      )}
     </div>
   );
 }

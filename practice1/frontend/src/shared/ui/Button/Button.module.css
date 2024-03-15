@@ -1,0 +1,15 @@
+.root {
+  width: 46px;
+  height: 46px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.root:hover {
+  background-color: rgba(221, 221, 221, 0.8666666667);
+}
+.root_disabled {
+  cursor: default;
+}
+.root_disabled:hover {
+  background-color: transparent;
+}

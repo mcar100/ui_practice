@@ -1,0 +1,24 @@
+.header_top > ul > li:nth-child(1) {
+  position: absolute;
+  top: 18px;
+  left: -10px;
+}
+.header_top > ul > li:nth-child(2) {
+  position: absolute;
+  top: 18px;
+  left: 43px;
+}
+.header_top > ul > li:nth-child(3) {
+  position: absolute;
+  top: 18px;
+  right: 40px;
+}
+.header_top > ul > li:nth-child(4) {
+  position: absolute;
+  top: 18px;
+  right: -10px;
+}
+
+.header_inner {
+  padding: 70px 0 42px;
+}

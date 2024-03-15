@@ -14,10 +14,23 @@ export type Icon1Name =
   | "real"
   | "map"
   | "webtoon"
+  | "chijijik"
   | "more"
   | "papago_text"
-  | "papago_box";
-export type IconSizeType = "xl" | "l" | "m" | "s" | "xs";
+  | "papago_box"
+  | "naver_logo"
+  | "search";
+
+export type IconSizeType =
+  | "xl"
+  | "l"
+  | "m"
+  | "s"
+  | "xs"
+  | "logo"
+  | "arrow"
+  | "keyboard"
+  | "search";
 
 export type ImageType = {
   imageUrl: string;
