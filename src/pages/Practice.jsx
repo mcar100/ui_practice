@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import LifeCoding from "../components/Practice/lifecoding/LifeCoding";
+import StarCoding from "../components/Practice/starcoding/StarCoding";
 
 function PracticePage() {
   const { subtopic } = useParams();
@@ -9,6 +10,8 @@ function PracticePage() {
   useEffect(() => {
     if (subtopic === "lifecoding") {
       setComponent(<LifeCoding />);
+    } else if (subtopic === "starcoding") {
+      setComponent(<StarCoding />);
     } else {
       setComponent(<div>No Page</div>);
     }

@@ -1,0 +1,852 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+p,
+pre,
+acronym,
+address,
+img,
+small,
+strong,
+sub,
+var,
+center,
+ol,
+ul,
+li,
+form,
+label,
+article,
+aside,
+canvas,
+details,
+footer,
+header,
+menu,
+nav,
+section,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+legend {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input {
+  outline: none;
+  box-sizing: border-box;
+}
+
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
+}
+
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+/* basic  */
+/* theme  */
+/* font-theme */
+/* situation  */
+/* buttons */
+/*practice-list components*/
+.project-list-container {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  width: 280px;
+  height: 80%;
+  background-color: #fff;
+}
+.project-list-container > h2 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #303030;
+}
+.project-list-container .project-list {
+  width: 80%;
+  height: 80%;
+  background-color: transparent;
+}
+.project-list-container .project-list > li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  width: 220px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid #303030;
+  border-radius: 3px;
+  background-color: #303030;
+  border-color: #303030;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 0px;
+  margin-bottom: 12px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.project-list-container .project-list > li > span {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0px;
+  width: 80%;
+  height: 100%;
+  background-color: transparent;
+}
+.project-list-container .project-list > li > a {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  background-color: #fff;
+  border-color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  color: #303030;
+  border: none;
+  border-radius: 100%;
+  padding: 3px;
+  text-align: center;
+  line-height: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  box-sizing: border-box;
+}
+.project-list-container .project-list > li > a:hover {
+  opacity: 90%;
+}
+.project-list-container .project-list > li > .hidden {
+  display: none;
+}
+
+/* buttons */
+.go-back-btn {
+  position: absolute;
+  top: 10px;
+  bottom: 0;
+  left: 10px;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  background-color: #303030;
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+  border: none solid #303030;
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+  border-radius: 100%;
+}
+.go-back-btn > a {
+  color: #fff !important;
+}
+.go-back-btn:hover {
+  opacity: 90%;
+}
+.go-back-btn:disabled {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+.go-back-btn:disabled:hover {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+.go-back-btn:hover {
+  opacity: 90%;
+}
+
+/* header-nav-container */
+.header-nav-container {
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  display: grid;
+  grid-template-columns: 5% 10% 70% 10% 5%;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+.header-nav-container .header-navbar {
+  grid-column: 3;
+}
+.header-nav-container .header-navbar .nav-menu .nav-item > a {
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  margin: 0 10px;
+}
+.header-nav-container .header-navbar .nav-menu .nav-item > a:hover {
+  opacity: 70%;
+}
+.header-nav-container .header-login {
+  grid-column: 4;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+.header-nav-container .header-login > button {
+  border: none;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  background-color: #fff;
+}
+.header-nav-container .header-login > button:hover {
+  opacity: 90%;
+}
+.header-nav-container .header-login > button > img {
+  width: 15px;
+  height: 15px;
+  background-color: inherit;
+}
+
+.practice-container {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 70%;
+  height: 80%;
+  background-color: #fff;
+  min-width: 300px;
+  min-height: 100px;
+  max-width: 800px;
+  max-height: none;
+}
+
+.page-container {
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  padding: 5px;
+}
+.page-container > .btn-container {
+  flex: 8%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.page-container > .btn-container > h4 {
+  width: 180px;
+  height: 20px;
+  background-color: inherit;
+}
+.page-container > .btn-container > button {
+  width: 100px;
+  height: 30px;
+  background-color: #303030;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  border: none solid #303030;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.page-container > .btn-container > button > a {
+  color: #fff !important;
+}
+.page-container > .btn-container > button:hover {
+  opacity: 90%;
+}
+.page-container > .btn-container > button:disabled {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+.page-container > .btn-container > button:disabled:hover {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+.page-container > .contents-container {
+  flex: 92%;
+  padding: 5px;
+}
+
+/* lifecoding scss */
+.lf-container {
+  width: 300px;
+  height: 150px;
+  background-color: inherit;
+  border: 5px solid black;
+  padding: 10px;
+}
+.lf-container > input {
+  width: 50px;
+  height: 30px;
+  background-color: #303030;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  border: none solid #303030;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.lf-container > input > a {
+  color: #fff !important;
+}
+.lf-container > input:hover {
+  opacity: 90%;
+}
+.lf-container > input:disabled {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+.lf-container > input:disabled:hover {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+
+@media screen and (max-height: 800px) {
+  .page-container {
+    overflow-y: auto;
+  }
+  .page-container .lf-container {
+    width: 200px;
+    height: 130px;
+    background-color: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .page-container {
+    overflow-x: auto;
+  }
+}
+/* lifecoding-advanced scss */
+.todolist-container {
+  width: 500px;
+  height: 90%;
+  background-color: #fff;
+  display: grid;
+  grid-template-areas: "header control " "nav  article" "nav  article";
+  grid-template-rows: 10% 90%;
+  grid-template-columns: 20% 80%;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+.todolist-container > header {
+  grid-area: header;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-top: 0px solid #303030;
+  border-left: 0px solid #303030;
+  border-right: 0px solid #303030;
+  border-bottom: 3px solid #303030;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  padding-left: 8px;
+  padding-right: 0px;
+}
+.todolist-container > header > h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.todolist-container > .control-container {
+  grid-area: control;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-top: 0px solid #303030;
+  border-left: 0px solid #303030;
+  border-right: 0px solid #303030;
+  border-bottom: 3px solid #303030;
+}
+.todolist-container > .control-container > li {
+  min-width: 50px;
+  min-height: 30px;
+}
+.todolist-container > .control-container > li > input[type=button] {
+  width: 60px;
+  height: 25px;
+  background-color: #303030;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  border: none solid #303030;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.todolist-container > .control-container > li > input[type=button] > a {
+  color: #fff !important;
+}
+.todolist-container > .control-container > li > input[type=button]:hover {
+  opacity: 90%;
+}
+.todolist-container > .control-container > li > input[type=button]:disabled {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+.todolist-container > .control-container > li > input[type=button]:disabled:hover {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+.todolist-container > .nav-container {
+  grid-area: nav;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-top: 0px solid #303030;
+  border-left: 0px solid #303030;
+  border-right: 3px solid #303030;
+  border-bottom: 0px solid #303030;
+  overflow: auto;
+}
+.todolist-container > .nav-container::-webkit-scrollbar {
+  width: 8px;
+}
+.todolist-container > .nav-container::-webkit-scrollbar-thumb {
+  background-color: #303030;
+  border-radius: 3px;
+}
+.todolist-container > .nav-container > ol > li {
+  width: 100%;
+  height: 30px;
+  background-color: #fff;
+  border-top: 0px solid #303030;
+  border-left: 0px solid #303030;
+  border-right: 0px solid #303030;
+  border-bottom: 1px solid #303030;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+.todolist-container > .nav-container > ol > li > a {
+  font-size: 18px;
+  font-weight: normal;
+  color: #000;
+}
+.todolist-container > .nav-container > ol > li > a:hover {
+  font-size: transparent;
+  font-weight: bold;
+  color: #000;
+}
+.todolist-container > .nav-container > ol > li > a.disabled {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+.todolist-container > .nav-container > ol > li > a.disabled:hover {
+  font-size: 18px;
+  font-weight: normal;
+  color: #000;
+  cursor: not-allowed;
+  opacity: 30%;
+}
+.todolist-container > .article-container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  grid-area: article;
+  grid-column: 2/4;
+}
+.todolist-container > .article-container > article {
+  width: inherit;
+  height: inherit;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+.todolist-container > .article-container > article > .article-box {
+  width: inherit;
+  height: inherit;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+.todolist-container > .article-container > article > .article-box > h2 {
+  flex: 10%;
+}
+.todolist-container > .article-container > article > .article-box > p {
+  flex: 90%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  max-width: 300px;
+}
+.todolist-container > .article-container > article > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.todolist-container > .article-container > article > form > p > .form-title {
+  width: 300px;
+  height: 40px;
+  background-color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+.todolist-container > .article-container > article > form > p > textarea {
+  width: 295px;
+  height: 300px;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  max-height: 300px;
+  resize: vertical;
+}
+.todolist-container > .article-container > article > form > p:last-child > input[type=submit] {
+  width: 80px;
+  height: 30px;
+  background-color: #303030;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  border: none solid #303030;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 4px;
+}
+.todolist-container > .article-container > article > form > p:last-child > input[type=submit] > a {
+  color: #fff !important;
+}
+.todolist-container > .article-container > article > form > p:last-child > input[type=submit]:hover {
+  opacity: 90%;
+}
+.todolist-container > .article-container > article > form > p:last-child > input[type=submit]:disabled {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+.todolist-container > .article-container > article > form > p:last-child > input[type=submit]:disabled:hover {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+.todolist-container > .article-container > article > form > p:last-child > input[type=button] {
+  width: 80px;
+  height: 30px;
+  background-color: #303030;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  border: none solid #303030;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 4px;
+  margin-right: 0px;
+}
+.todolist-container > .article-container > article > form > p:last-child > input[type=button] > a {
+  color: #fff !important;
+}
+.todolist-container > .article-container > article > form > p:last-child > input[type=button]:hover {
+  opacity: 90%;
+}
+.todolist-container > .article-container > article > form > p:last-child > input[type=button]:disabled {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+.todolist-container > .article-container > article > form > p:last-child > input[type=button]:disabled:hover {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+
+/* lifecoding tutorial2 scss */
+#tutorial2-container,
+#tutorial2-container div {
+  border: 5px solid #303030;
+  border-radius: 1px;
+  margin: 5px;
+}
+#tutorial2-container > .grid,
+#tutorial2-container div > .grid {
+  display: grid;
+  grid-template-areas: "left right";
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+#tutorial2-container > .grid > div:nth-child(1),
+#tutorial2-container div > .grid > div:nth-child(1) {
+  border: 5px solid red;
+  border-radius: 1px;
+  margin: 5px;
+  grid-area: left;
+}
+#tutorial2-container > .grid > div:nth-child(1) div,
+#tutorial2-container div > .grid > div:nth-child(1) div {
+  border: 5px solid red;
+  border-radius: 1px;
+  margin: 5px;
+}
+#tutorial2-container > .grid > div:nth-child(2),
+#tutorial2-container div > .grid > div:nth-child(2) {
+  border: 5px solid blue;
+  border-radius: 1px;
+  margin: 5px;
+  grid-area: right;
+}
+#tutorial2-container > .grid > div:nth-child(2) div,
+#tutorial2-container div > .grid > div:nth-child(2) div {
+  border: 5px solid blue;
+  border-radius: 1px;
+  margin: 5px;
+}
+#tutorial2-container > .grid > div:nth-child(2) div input[type=button],
+#tutorial2-container div > .grid > div:nth-child(2) div input[type=button] {
+  width: 35px;
+  height: 35px;
+  background-color: inherit;
+  font-size: 12px;
+  font-weight: bold;
+  color: #303030;
+  border: none solid #303030;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#tutorial2-container > .grid > div:nth-child(2) div input[type=button] > a,
+#tutorial2-container div > .grid > div:nth-child(2) div input[type=button] > a {
+  color: #303030 !important;
+}
+#tutorial2-container > .grid > div:nth-child(2) div input[type=button]:hover,
+#tutorial2-container div > .grid > div:nth-child(2) div input[type=button]:hover {
+  opacity: 90%;
+}
+#tutorial2-container > .grid > div:nth-child(2) div input[type=button]:disabled,
+#tutorial2-container div > .grid > div:nth-child(2) div input[type=button]:disabled {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+#tutorial2-container > .grid > div:nth-child(2) div input[type=button]:disabled:hover,
+#tutorial2-container div > .grid > div:nth-child(2) div input[type=button]:disabled:hover {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+
+/* lifecoding tutorial3 scss */
+.tutorial3-container {
+  border: 5px solid #303030;
+  border-radius: 1px;
+  margin: 5px;
+  text-align: center;
+}
+.tutorial3-container > div {
+  width: 90%;
+  height: 200px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  border: 5px solid #303030;
+  border-radius: 1px;
+  margin: 15px;
+}
+.tutorial3-container > div > input[type=text] {
+  width: 60px;
+  height: 35px;
+  background-color: #fff;
+}
+.tutorial3-container > div > button {
+  width: 35px;
+  height: 35px;
+  background-color: #303030;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  border: none solid #303030;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 5px;
+}
+.tutorial3-container > div > button > a {
+  color: #fff !important;
+}
+.tutorial3-container > div > button:hover {
+  opacity: 90%;
+}
+.tutorial3-container > div > button:disabled {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+.tutorial3-container > div > button:disabled:hover {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+
+.body-container {
+  display: grid;
+  grid-template-areas: ". header ." ". body ." ". footer .";
+  grid-template-rows: 10% 80% 10%;
+  grid-template-columns: 0 100% 0;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+.body-container header {
+  grid-area: header;
+}
+.body-container header .nav-menu {
+  width: 100%;
+  height: 50px;
+  background-color: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+.body-container header .nav-menu .nav-item {
+  padding: 5px;
+}
+.body-container main {
+  grid-area: body;
+}
+.body-container footer {
+  grid-area: footer;
+}
+.body-container .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  background-color: #303030;
+  color: #000;
+}
+.body-container main.container {
+  background-color: #f2f2f2;
+  color: #000;
+}

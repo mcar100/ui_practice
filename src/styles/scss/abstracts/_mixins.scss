@@ -187,6 +187,10 @@
   @include border($bw, solid, $bc, $br);
   cursor: pointer;
 
+  & > a {
+    color: $fc !important;
+  }
+
   &:hover {
     opacity: 90%;
   }

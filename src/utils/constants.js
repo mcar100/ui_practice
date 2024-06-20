@@ -1,6 +1,6 @@
 export const MENU_BAR = ["Home", "About", "Redux"];
 export const NAV_URL = ["/", "/about", "/practice/redux"];
-export const PRACTICE_URL = ["redux", "recoil"];
+export const PRACTICE_URL = ["redux", "recoil", "hooks"];
 export const PRACTICE_LIST = [
   {
     title: "Redux",
@@ -16,5 +16,10 @@ export const PRACTICE_LIST = [
     title: "Recoil",
     list: ["예정 없음"],
     url: [],
+  },
+  {
+    title: "Hooks",
+    list: ["useMemo/useCallback"],
+    url: ["starcoding/tutorial1"],
   },
 ];
